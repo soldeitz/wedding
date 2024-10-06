@@ -1,0 +1,1 @@
+export {getEnvVars} from './lib/envRetrievers';
