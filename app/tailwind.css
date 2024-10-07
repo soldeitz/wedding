@@ -21,7 +21,7 @@
 }
 
 .fade-in {
-  animation: fadeIn 1s ease-out;
+  animation: fadeIn 2s ease-out;
   animation-delay: 1s;
   animation-fill-mode: both;
 }
