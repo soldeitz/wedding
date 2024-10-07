@@ -1,3 +1,6 @@
 # Ire e Carlo
 
-## Revealed by manzocostine
+## Revealed by `manzocostine`
+
+### Partners
+- `kowacicius enterprise`
