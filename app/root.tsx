@@ -9,8 +9,7 @@ import type { LinksFunction } from "@remix-run/node";
 
 import "./tailwind.css";
 import { Shell } from "./components/lib/Shell";
-import { useEffect, useState } from "react";
-import loading from "./assets/images/loading.gif";
+
 export const links: LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
@@ -33,7 +32,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="bg-primary text-slate-200">
         {children}
         <ScrollRestoration />
         <Scripts />
@@ -43,27 +42,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  const [splash, setSplash] = useState(true);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setSplash(false);
-    }, 2000);
-  }, []);
-
   return (
-    <>
-      {splash ? (
-        <div className="h-screen">
-          <div className="flex justify-center items-center h-full">
-            <img src={loading} alt="loading" />
-          </div>
-        </div>
-      ) : (
-        <Shell>
-          <Outlet />
-        </Shell>
-      )}
-    </>
+    <Shell>
+      <Outlet />
+    </Shell>
   );
 }

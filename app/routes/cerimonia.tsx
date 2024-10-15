@@ -1,7 +1,6 @@
 import type { MetaFunction } from "@remix-run/node";
 
 import cerimonia1_desktop from "../assets/images/cerimonia1_desktop.png";
-import cerimonia1_mobile from "../assets/images/cerimonia1_mobile.png";
 import { Link } from "@remix-run/react";
 
 export const meta: MetaFunction = () => {
@@ -24,20 +23,22 @@ export default function Cerimonia() {
             </p>
           </div>
           <img
-            src={
-              window.innerWidth < 768 ? cerimonia1_mobile : cerimonia1_desktop
-            }
+            src={cerimonia1_desktop}
             alt="cerimonia1"
             className="animate-[slideUp_1s_ease-out] md:w-2/3 rounded-lg"
           />
         </div>
       </div>
       <div className="h-screen flex flex-col justify-around items-center">
-        <Link
-          to="https://www.google.it/maps/place/Piazza+S.+Nazaro+in+Brolo,+5,+20122+Milano+MI/@45.458492,9.1901683,1081m/data=!3m2!1e3!4b1!4m6!3m5!1s0x4786c6a8107895af:0x16687f160cfa8af2!8m2!3d45.458492!4d9.1927432!16s%2Fg%2F11c22qyvy4?entry=ttu&g_ep=EgoyMDI0MTAwOS4wIKXMDSoASAFQAw%3D%3D"
-          className="underline text-blue-500">
-          Piazza San Nazaro in Brolo, 5, 20122 Milano MI, Italia
-        </Link>
+        <iframe
+          className="w-[80vw] md:w-[600px] h-96"
+          title="mappa"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2984.4034632126477!2d9.192743199999999!3d45.458492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6a8107895af%3A0x16687f160cfa8af2!2sPiazza%20S.%20Nazaro%20in%20Brolo%2C%205%2C%2020122%20Milano%20MI!5e1!3m2!1sit!2sit!4v1729002838246!5m2!1sit!2sit"
+          style={{ border: 0 }}
+          allowFullScreen={false}
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
 
         <div>
           <h3 className="text-center text-2xl md:text-3xl mb-4">
@@ -59,7 +60,8 @@ export default function Cerimonia() {
                   <br />
                   <Link
                     className="underline text-blue-500"
-                    to="https://www.google.it/maps/place/Via+Privata+Pietro+Calderon+de+la+Barca,+2,+20122+Milano+MI/@45.4585137,9.1884985,1081m/data=!3m2!1e3!4b1!4m6!3m5!1s0x4786c6a831da9929:0x5cd40a1cdd927a62!8m2!3d45.4585137!4d9.1910734!16s%2Fg%2F11q8fkc8cf?entry=ttu&g_ep=EgoyMDI0MTAwOS4wIKXMDSoASAFQAw%3D%3D">
+                    to="https://www.google.it/maps/place/Via+Privata+Pietro+Calderon+de+la+Barca,+2,+20122+Milano+MI/@45.4585137,9.1884985,1081m/data=!3m2!1e3!4b1!4m6!3m5!1s0x4786c6a831da9929:0x5cd40a1cdd927a62!8m2!3d45.4585137!4d9.1910734!16s%2Fg%2F11q8fkc8cf?entry=ttu&g_ep=EgoyMDI0MTAwOS4wIKXMDSoASAFQAw%3D%3D"
+                  >
                     Via Privata Pietro Calderon de la Barca, 2, 20122 Milano MI,
                     Italia
                   </Link>
@@ -69,7 +71,8 @@ export default function Cerimonia() {
                   <br />
                   <Link
                     className="underline text-blue-500"
-                    to="https://www.google.it/maps/place/Via+Chiaravalle,+12,+20122+Milano+MI/@45.4604639,9.1899609,1081m/data=!3m2!1e3!4b1!4m6!3m5!1s0x4786c6a8f463c195:0xbeaaa5e1894b25de!8m2!3d45.4604639!4d9.1925358!16s%2Fg%2F11bw4j9hv0?entry=ttu&g_ep=EgoyMDI0MTAwOS4wIKXMDSoASAFQAw%3D%3D">
+                    to="https://www.google.it/maps/place/Via+Chiaravalle,+12,+20122+Milano+MI/@45.4604639,9.1899609,1081m/data=!3m2!1e3!4b1!4m6!3m5!1s0x4786c6a8f463c195:0xbeaaa5e1894b25de!8m2!3d45.4604639!4d9.1925358!16s%2Fg%2F11bw4j9hv0?entry=ttu&g_ep=EgoyMDI0MTAwOS4wIKXMDSoASAFQAw%3D%3D"
+                  >
                     Via Chiaravalle, 12, 20122 Milano MI, Italia
                   </Link>
                 </li>
@@ -78,7 +81,8 @@ export default function Cerimonia() {
                   <br />
                   <Link
                     className="underline text-blue-500"
-                    to="https://www.google.it/maps/place/Largo+Francesco+Richini,+15,+20122+Milano+MI/@45.4592336,9.1901204,1081m/data=!3m2!1e3!4b1!4m6!3m5!1s0x4786c6a86c1e1f15:0xd13e01148f2ac9d5!8m2!3d45.4592336!4d9.1926953!16s%2Fg%2F11scx77hl7?entry=ttu&g_ep=EgoyMDI0MTAwOS4wIKXMDSoASAFQAw%3D%3D">
+                    to="https://www.google.it/maps/place/Largo+Francesco+Richini,+15,+20122+Milano+MI/@45.4592336,9.1901204,1081m/data=!3m2!1e3!4b1!4m6!3m5!1s0x4786c6a86c1e1f15:0xd13e01148f2ac9d5!8m2!3d45.4592336!4d9.1926953!16s%2Fg%2F11scx77hl7?entry=ttu&g_ep=EgoyMDI0MTAwOS4wIKXMDSoASAFQAw%3D%3D"
+                  >
                     Largo Francesco Richini, 15, 20122 Milano MI, Italia
                   </Link>
                 </li>
