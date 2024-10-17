@@ -23,7 +23,12 @@ export const Navbar = () => {
       <div className="flex justify-between items-center md:hidden z-20">
         <h1 className="text-3xl w-full">{title}</h1>
         <div className="drawer drawer-end justify-end">
-          <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
+          <input
+            id="my-drawer-4"
+            type="checkbox"
+            className="drawer-toggle"
+            onChange={() => document.body.classList.toggle("hide-scroll")}
+          />
           <div className="drawer-content">
             {/* Page content here */}
             <label
@@ -33,7 +38,7 @@ export const Navbar = () => {
               <MdOutlineMenu className="text-4xl p-0" />
             </label>
           </div>
-          <div className="drawer-side min-h-full z-50">
+          <div className="drawer-side overflow-hidden z-50">
             <div className="absolute top-0 left-0 right-0 flex justify-end px-5 pt-4 z-50">
               <label
                 htmlFor="my-drawer-4"
@@ -43,7 +48,7 @@ export const Navbar = () => {
                 <RxCross1 className="text-4xl p-0 text-base-content" />
               </label>
             </div>
-            <div className="menu gap-16 text-center bg-amber-50 text-base-content h-full w-full pt-20 px-4">
+            <div className="menu gap-12 text-center bg-amber-50 text-base-content h-full w-full pt-20 px-4">
               {/* Sidebar content here */}
               <div className="text-5xl font-bold">
                 <Link
@@ -111,13 +116,40 @@ export const Navbar = () => {
       </div>
       {/* // DESKTOP */}
 
-      <nav className="absolute top-0 left-0 right-0 w-100 justify-between mx-10 mt-7 hidden md:flex">
-        <Link to="/">Home</Link>
-        <Link to="cerimonia">Cerimonia</Link>
-        <Link to="rsvp">RSVP</Link>
-        <Link to="lista-nozze">Lista Nozze</Link>
-        <Link to="ricevimento">Ricevimento</Link>
-        <Link to="galleria">Galleria</Link>
+      <nav className="absolute top-0 left-0 right-0 w-100 justify-center gap-10 mx-10 mt-7 hidden md:flex text-xl">
+        <Link className={route === "" ? "text-secondary" : ""} to="/">
+          Home
+        </Link>
+        <Link
+          className={route === "cerimonia" ? "text-secondary font-bold" : ""}
+          to="cerimonia"
+        >
+          Cerimonia
+        </Link>
+        <Link
+          className={route === "rsvp" ? "text-secondary font-bold" : ""}
+          to="rsvp"
+        >
+          RSVP
+        </Link>
+        <Link
+          className={route === "lista-nozze" ? "text-secondary font-bold" : ""}
+          to="lista-nozze"
+        >
+          Lista Nozze
+        </Link>
+        <Link
+          className={route === "ricevimento" ? "text-secondary font-bold" : ""}
+          to="ricevimento"
+        >
+          Ricevimento
+        </Link>
+        <Link
+          className={route === "galleria" ? "text-secondary font-bold" : ""}
+          to="galleria"
+        >
+          Galleria
+        </Link>
       </nav>
     </>
   );

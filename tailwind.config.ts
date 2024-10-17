@@ -5,8 +5,13 @@ import type { Config } from "tailwindcss";
 export default {
   content: ["./app/**/{**,.client,.server}/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    fontFamily: {
-      sans: ["Inter", "sans-serif"],
+    extend: {
+      fontFamily: {
+        "californian": ["CalifornianFB", "normal"],
+        "californian-italic": ["CalifornianFB", "italic"],
+        "californian-bold": ["CalifornianFB", "bold"],
+        "andaray": ["Andaray", "normal"],
+      },
     },
   },
   daisyui: {

@@ -33,7 +33,7 @@ export default function Index() {
           <img src={home1_desktop} alt="home1" />
         </div>
       </div>
-      <div className="block md:hidden">
+      <div className="block md:hidden mb-6">
         <img src={home1} alt="home1" />
       </div>
     </div>
