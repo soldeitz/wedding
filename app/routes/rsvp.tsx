@@ -33,7 +33,7 @@ export const action = async ({ request }: ActionFunctionArgs) => {
   return redirect("/rsvp-ok");
 };
 
-export default function Rsvp() {
+const Rsvp = () => {
   return (
     <div className="min-h-screen w-full flex flex-col justify-center items-stretch md:items-center mt-5 md:mt-0 pb-10 md:pb-0">
       <div className="flex flex-col justify-center items-center mb-8">
@@ -49,4 +49,6 @@ export default function Rsvp() {
       <RsvpForm />
     </div>
   );
-}
+};
+
+export default Rsvp;

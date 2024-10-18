@@ -10,3 +10,10 @@ export const GuestSchema = z.object({
 });
 
 export type Guest = z.infer<typeof GuestSchema>;
+
+export const UserSchema = z.object({
+  username: z.string().trim().min(1, {message: "Campo obbligatorio"}),
+  password: z.string().trim().min(1, {message: "Campo obbligatorio"}),
+});
+
+export type User = z.infer<typeof UserSchema>;

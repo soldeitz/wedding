@@ -6,7 +6,7 @@ import ErrorMessage from "~/components/lib/ErrorMessage";
 
 const resolver = zodResolver(GuestSchema);
 
-export default function RsvpForm() {
+const RsvpForm = () => {
   const {
     handleSubmit,
     formState: { errors },
@@ -113,4 +113,6 @@ export default function RsvpForm() {
       </div>
     </Form>
   );
-}
+};
+
+export default RsvpForm;
