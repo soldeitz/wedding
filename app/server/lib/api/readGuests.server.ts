@@ -4,8 +4,9 @@ import { app } from "../firebase.server";
 export const readGuests = async () => {
     try {
         const db = getFirestore(app);
-        const response = await getDocs(collection(db, "guests"));
-        return response;
+        const guestsRef = collection(db, "guests");
+        const response = await getDocs(guestsRef);
+        return response.docs.map((doc) => doc.data());
     }
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     catch (error: any) {
