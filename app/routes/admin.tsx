@@ -10,7 +10,7 @@ export const meta: MetaFunction = () => {
 
 export const loader: LoaderFunction = async ({ request }) => {
   const url = new URL(request.url);
-  const params = url.pathname.split("/").filter((c) => c !== "/");
+  const params = url.pathname.split("/").filter((c) => c !== "" && c !== "/");
   const current = params[params.length - 1];
   if (current === "admin") return redirect("/admin/dashboard");
   return {};

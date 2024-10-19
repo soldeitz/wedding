@@ -30,13 +30,11 @@ export const loader: LoaderFunction = async ({ request }) => {
   );
 
   const error = session.get("sessionErrorKey");
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  return json<any>({ error });
+  return json({ error });
 };
 
 const Login = () => {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const loaderData: any = useLoaderData();
+  const loaderData = useLoaderData<{ error?: { message: string } }>();
   const {
     handleSubmit,
     formState: { errors },
@@ -84,7 +82,9 @@ const Login = () => {
         </div>
         <div>
           {loaderData?.error ? (
-            <p>ERROR: {loaderData?.error?.message}</p>
+            <p className="text-error text-sm mt-4 font-bold font-sans">
+              {loaderData?.error?.message}
+            </p>
           ) : null}
         </div>
         <div className="flex justify-end mt-6">

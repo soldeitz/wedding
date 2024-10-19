@@ -8,7 +8,7 @@ export const getEnvVars = () => {
         FIREBASE_APP_ID: import.meta.env.VITE_FIREBASE_APP_ID,
         FIREBASE_MEASUREMENT_ID: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
         ADMIN_USER: import.meta.env.VITE_ADMIN_USER,
-        PASSWORD_ADMIN: import.meta.env.VITE_PASSWORD_ADMIN,
+        ADMIN_PASSWORD: import.meta.env.VITE_ADMIN_PASSWORD,
         ENV: import.meta.env.VITE_ENV,
     }
 }
