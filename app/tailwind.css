@@ -2,11 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
-/* html,
-body {
-  @apply bg-white dark:bg-gray-950;
-
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
   }
-} */
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 2s ease-out;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+}
+
+@layer base {
+  @font-face {
+    font-family: CalifornianFB;
+    font-weight: 400;
+    font-style: normal;
+    src: url("assets/fonts/californianFB/CALIFR.TTF");
+  }
+  @font-face {
+    font-family: CalifornianFB;
+    font-weight: 700;
+    font-style: bold;
+    src: url("assets/fonts/californianFB/CALIFB.TTF");
+  }
+  @font-face {
+    font-family: CalifornianFB;
+    font-weight: 400;
+    font-style: italic;
+    src: url("assets/fonts/californianFB/CALIFI.TTF");
+  }
+  @font-face {
+    font-family: andaray;
+    font-weight: 400;
+    font-style: normal;
+    src: url("assets/fonts/andaray/Andaray.otf");
+  }
+}
+
+.hide-scroll {
+  overflow: hidden !important;
+  height: 100vh;
+}
