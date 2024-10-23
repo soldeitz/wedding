@@ -7,6 +7,10 @@ export const meta: MetaFunction = () => {
     { title: "Irene e Carlo" },
     { name: "description", content: "Sito Matrimonio di Irene e Carlo" },
   ];
+  return [
+    { title: "Irene e Carlo" },
+    { name: "description", content: "Sito Matrimonio di Irene e Carlo" },
+  ];
 };
 
 export default function Index() {
