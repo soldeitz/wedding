@@ -16,13 +16,13 @@ export default function Cerimonia() {
     <div className="flex flex-col">
       <div className="h-screen md:mx-auto md:py-8">
         <div className="flex flex-col justify-center gap-10 h-full items-center px-4 ">
-          <div className="fade-in mx-auto p-4 md:w-[60vw] flex flex-col gap-4 justify-center items-center md:h-full">
+          <div className="fade-in mx-auto p-4 md:w-[60vw] flex flex-col gap-4 justify-center items-center">
             <p className="text-center text-5xl md:text-7xl font-andaray">
               26 Dicembre 2024
             </p>
             <p className="text-center text-xl md:text-2xl md:w-64">
               Ci sposeremo alle 14.30 alla Basilica di San Nazaro in Brolo a
-              Milano.
+              Milano
             </p>
           </div>
           <img

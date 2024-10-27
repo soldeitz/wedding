@@ -17,16 +17,18 @@ export default function Index() {
   return (
     <div className="flex flex-col">
       <div className="h-screen md:mx-auto ">
-        <div className="flex flex-col justify-evenly h-full items-center">
+        <div className="flex flex-col justify-start mt-8 md:mt-0 md:justify-center h-full items-center">
           <img
             src={logo}
             alt="logo"
-            className="animate-[slideUp_1s_ease-out] md:w-1/3"
+            className="animate-[slideUp_1s_ease-out] v-[30vw] md:w-[33vw]"
           />
-          <div className="fade-in mx-auto p-4 md:w-2/3">
-            <p className="text-center text-2xl md:text-4xl">
-              Ardi, non troppo vicino al cielo e non troppo lontano. Ricordati,
-              cuore, di quello sguardo in cui ti attende tutta l’eternità.
+          <div className="fade-in mx-auto p-4">
+            <p className="text-center text-1xl md:text-4xl">
+              Ardi, non troppo vicino al cielo <br />
+              e non troppo lontano. <br />
+              Ricordati, cuore, di quello sguardo <br />
+              in cui ti attende tutta l’eternità.
             </p>
             <p className="w-full text-end">Karol Wojtyła</p>
           </div>

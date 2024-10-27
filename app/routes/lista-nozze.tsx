@@ -59,9 +59,9 @@ export default function ListaNozze() {
   return (
     <div className="flex flex-col">
       <div className="h-screen md:mx-auto md:py-8">
-        <div className="flex flex-col justify-center gap-10 h-full items-center px-4">
-          <div className="fade-in mx-auto p-4 md:w-[60vw] flex flex-col gap-4 justify-center items-center md:h-full lg:w-1/2">
-            <p className="text-center text-5xl md:text-7xl font-andaray">
+        <div className="flex flex-col justify-center md:h-full items-center px-4">
+          <div className="fade-in mx-auto p-4 flex flex-col gap-4 justify-center items-center lg:w-[70vw]">
+            <p className="text-center text-5xl md:text-7xl font-andaray mt-1 md:mt-0">
               Viaggio di nozze
             </p>
             <p className="text-center text-lg md:text-2xl">
@@ -70,7 +70,7 @@ export default function ListaNozze() {
               Buona Speranza potete sostenerci con un regalo a:
             </p>
             <div className="flex flex-col gap-2 text-md md:text-xl items-center">
-              <div className="flex gap-2 items-center">
+              <div className="flex gap-2 items-center text-sm md:text-lg">
                 <p>IBAN: IT57U0569601600000026375X24</p>
                 {copied1 ? (
                   <p className="text-secondary">Copiato!</p>
@@ -82,34 +82,43 @@ export default function ListaNozze() {
                         "IT57U0569601600000026375X24"
                       );
                       setCopied1(true);
-                    }}>
+                    }}
+                  >
                     <FaRegCopy />
                   </button>
                 )}
               </div>
               <div className="">Intestato a Carlo Carù</div>
+              <div>Causale: Matrimonio Irene e Carlo</div>
             </div>
             <div className="flex flex-col gap-2 text-md md:text-xl items-center">
-              <div className="flex gap-2 items-center">
+              <div className="font-bold text-lg md:text-2xl">
+                Für die deutsche Freunde:
+              </div>
+              <div className="flex gap-2 items-center text-sm md:text-lg">
                 <p>IBAN: DE10500105175422300500</p>
                 {copied2 ? (
-                  <p className="text-secondary">Copiato!</p>
+                  <p className="text-secondary">Kopiert!</p>
                 ) : (
                   <button
                     className="bg-slate-700 text-white p-2 rounded-md"
                     onClick={() => {
                       navigator.clipboard.writeText("DE10500105175422300500");
                       setCopied2(true);
-                    }}>
+                    }}
+                  >
                     <FaRegCopy />
                   </button>
                 )}
               </div>
-              <div className="">Intestato a Irene Ferrari</div>
+              <div className="">Empfänger Irene Ferrari</div>
+              <div className="text-center">
+                Verwendungszweck: Hochzeit Irene und Carlo
+              </div>
             </div>
           </div>
           <div className="hidden md:flex">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 animate-[slideUp_1s_ease-out] md:max-w-[40vw] mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-2 animate-[slideUp_1s_ease-out] md:max-w-[80vw] mx-auto">
               <img
                 src={sa1_desktop}
                 alt="South Africa 1"
@@ -135,11 +144,13 @@ export default function ListaNozze() {
           <div className="md:hidden">
             <div
               ref={carouselRef}
-              className="carousel rounded-box w-full overflow-x-auto snap-x snap-mandatory animate-[slideUp_1s_ease-out]">
+              className="carousel rounded-box w-full overflow-x-auto snap-x snap-mandatory animate-[slideUp_1s_ease-out]"
+            >
               {images.map((image, index) => (
                 <div
                   key={index}
-                  className="carousel-item w-full flex-shrink-0 snap-start">
+                  className="carousel-item w-full flex-shrink-0 snap-start"
+                >
                   <img
                     src={image}
                     alt={`South Africa ${index + 1}`}
@@ -161,21 +172,11 @@ export default function ListaNozze() {
               ))}
             </div>
           </div>
-          {/* <img
-            src={sa1_desktop}
-            alt="cerimonia1"
-            className="hidden md:block animate-[slideUp_1s_ease-out] md:w-2/3 rounded-lg"
-          /> */}
-          {/* <img
-            src={sa1_desktop}
-            alt="cerimonia1"
-            className="md:hidden block animate-[slideUp_1s_ease-out] h-[45vh] rounded-lg"
-          /> */}
         </div>
       </div>
-      <div className="h-screen md:mx-auto md:py-8">
+      <div className="mt-8 md:mx-auto md:py-8">
         <div className="flex flex-col justify-center gap-10 h-full items-center px-4">
-          <div className="fade-in mx-auto p-4 md:w-[60vw] flex flex-col gap-4 justify-center items-center md:h-full lg:w-1/2">
+          <div className="fade-in mx-auto p-4 flex flex-col gap-4 justify-center items-center md:h-full lg:w-[70vw]">
             <p className="text-center text-5xl md:text-7xl font-andaray">
               Pronti a tutte le partenze
             </p>
@@ -187,7 +188,7 @@ export default function ListaNozze() {
               se volete contribuire alla causa…
             </p>
             <div className="flex flex-col gap-2 text-md md:text-xl items-center">
-              <div className="flex gap-2 items-center">
+              <div className="flex gap-2 items-center text-sm md:text-lg">
                 <p>IBAN: IT57U0569601600000026375X24</p>
                 {copied1 ? (
                   <p className="text-secondary">Copiato!</p>
@@ -199,30 +200,39 @@ export default function ListaNozze() {
                         "IT57U0569601600000026375X24"
                       );
                       setCopied1(true);
-                    }}>
+                    }}
+                  >
                     <FaRegCopy />
                   </button>
                 )}
               </div>
               <div className="">Intestato a Carlo Carù</div>
+              <div>Causale: Matrimonio Irene e Carlo</div>
             </div>
             <div className="flex flex-col gap-2 text-md md:text-xl items-center">
-              <div className="flex gap-2 items-center">
+              <div className="font-bold text-lg md:text-2xl">
+                Für die deutsche Freunde:
+              </div>
+              <div className="flex gap-2 items-center text-sm md:text-lg">
                 <p>IBAN: DE10500105175422300500</p>
                 {copied2 ? (
-                  <p className="text-secondary">Copiato!</p>
+                  <p className="text-secondary">Kopiert!</p>
                 ) : (
                   <button
                     className="bg-slate-700 text-white p-2 rounded-md"
                     onClick={() => {
                       navigator.clipboard.writeText("DE10500105175422300500");
                       setCopied2(true);
-                    }}>
+                    }}
+                  >
                     <FaRegCopy />
                   </button>
                 )}
               </div>
-              <div className="">Intestato a Irene Ferrari</div>
+              <div className="">Empfänger Irene Ferrari</div>
+              <div className="text-center">
+                Verwendungszweck: Hochzeit Irene und Carlo
+              </div>
             </div>
           </div>
           <div className="w-1/2 hidden md:block">
@@ -243,48 +253,10 @@ export default function ListaNozze() {
               </div>
               <div className="diff-resizer"></div>
             </div>
-
-            {/* <div className="diff aspect-[16/9] hidden md:block">
-              <div className="diff-item-1">
-                <img
-                  src={fiesta1_desktop}
-                  alt="fiesta1"
-                  className="rounded-lg h-auto object-cover"
-                />
-              </div>
-              <div className="diff-item-2">
-                <img
-                  src={fiesta2_desktop}
-                  alt="fiesta1"
-                  className="rounded-lg h-auto object-cover"
-                />
-              </div>
-              <div className="diff-resizer"></div>
-            </div>
-
-            <img
-              src={fiesta1_mobile}
-              alt="fiesta1"
-              className="rounded-lg h-auto object-cover md:hidden"
-            /> */}
           </div>
         </div>
-        {/* <div className="h-screen md:mx-auto md:py-8 bg-slate-900">
-          <div className="flex flex-col justify-center gap-10 h-full items-center px-4">
-            <img
-              src={fiesta2_desktop}
-              alt="fiesta2"
-              className="rounded-lg h-auto object-cover hidden md:block w-1/2"
-            />
-            <img
-              src={fiesta2_mobile}
-              alt="fiesta2"
-              className="rounded-lg h-auto object-cover md:hidden"
-            />
-          </div>
-        </div> */}
       </div>
-      <div className="h-screen md:hidden">
+      <div className="md:hidden">
         <div className="diff aspect-[3/4] rounded-lg">
           <div className="diff-item-1">
             <img
