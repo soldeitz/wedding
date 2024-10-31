@@ -3,7 +3,9 @@ import { z } from "zod";
 export const GuestSchema = z.object({
   first_name: z.string().trim().min(1, {message: "Campo obbligatorio"}),
   last_name: z.string().trim().min(1, {message: "Campo obbligatorio"}),
-  children: z.number({message: "Campo obbligatorio", required_error: "Campo obbligatorio"}).nonnegative({message: "Inserire un numero positivo"}),
+  children_0_3: z.number({message: "Campo obbligatorio", required_error: "Campo obbligatorio"}).nonnegative({message: "Inserire un numero positivo"}),
+  children_3_9: z.number({message: "Campo obbligatorio", required_error: "Campo obbligatorio"}).nonnegative({message: "Inserire un numero positivo"}),
+  children_9: z.number({message: "Campo obbligatorio", required_error: "Campo obbligatorio"}).nonnegative({message: "Inserire un numero positivo"}),
   is_present: z.boolean({message: "Campo obbligatorio", required_error: "Campo obbligatorio"}),
   allergies: z.string(),
   notes: z.string(),

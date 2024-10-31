@@ -48,18 +48,6 @@ const RsvpForm = () => {
           <ErrorMessage error={errors.last_name} />
         </div>
         <div className="flex flex-col justify-start">
-          <label htmlFor="children" className="text-md">
-            Figli *
-          </label>
-          <input
-            id="children"
-            type="number"
-            className="input input-bordered w-full md:max-w-xs font-sans font-light"
-            {...register("children", { valueAsNumber: true })}
-          />
-          <ErrorMessage error={errors.children} />
-        </div>
-        <div className="flex flex-col justify-start">
           <label htmlFor="allergies" className="text-md">
             Allergie
           </label>
@@ -70,6 +58,42 @@ const RsvpForm = () => {
             {...register("allergies")}
           />
           <ErrorMessage error={errors.allergies} />
+        </div>
+        <div className="flex flex-col justify-start">
+          <label htmlFor="children" className="text-md">
+            Figli 0-3 anni *
+          </label>
+          <input
+            id="children"
+            type="number"
+            className="input input-bordered w-full md:max-w-xs font-sans font-light"
+            {...register("children_0_3", { valueAsNumber: true })}
+          />
+          <ErrorMessage error={errors.children_0_3} />
+        </div>
+        <div className="flex flex-col justify-start">
+          <label htmlFor="children" className="text-md">
+            Figli 3-9 anni *
+          </label>
+          <input
+            id="children"
+            type="number"
+            className="input input-bordered w-full md:max-w-xs font-sans font-light"
+            {...register("children_3_9", { valueAsNumber: true })}
+          />
+          <ErrorMessage error={errors.children_3_9} />
+        </div>
+        <div className="flex flex-col justify-start">
+          <label htmlFor="children" className="text-md">
+            Figli 9+ anni *
+          </label>
+          <input
+            id="children"
+            type="number"
+            className="input input-bordered w-full md:max-w-xs font-sans font-light"
+            {...register("children_9", { valueAsNumber: true })}
+          />
+          <ErrorMessage error={errors.children_9} />
         </div>
         <div className="flex flex-col justify-start">
           <label htmlFor="notes" className="text-md">

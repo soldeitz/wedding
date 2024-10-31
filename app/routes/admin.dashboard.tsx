@@ -49,7 +49,9 @@ export default function DashboardPage() {
             <tr className="text-slate-200 text-bold text-xl text-center">
               <th>Nome</th>
               <th>Cognome</th>
-              <th>Figli</th>
+              <th>Figli 0-3 anni</th>
+              <th>Figli 3-9 anni</th>
+              <th>Figli 9+ anni</th>
               <th>Presente</th>
               <th>Allergie</th>
               <th>Note</th>
@@ -60,7 +62,9 @@ export default function DashboardPage() {
               <tr key={index}>
                 <td>{guest.first_name}</td>
                 <td>{guest.last_name}</td>
-                <td>{guest.children}</td>
+                <td>{guest.children_0_3}</td>
+                <td>{guest.children_3_9}</td>
+                <td>{guest.children_9}</td>
                 <td
                   className={`text-center font-bold ${
                     guest.is_present ? "bg-emerald-600" : "bg-rose-600"
