@@ -1,4 +1,5 @@
 export const getEnvVars = () => {
+    console.log(import.meta.env.VITE_ENV);
     return {
         FIREBASE_API_KEY: import.meta.env.VITE_FIREBASE_API_KEY,
         FIREBASE_AUTH_DOMAIN: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
