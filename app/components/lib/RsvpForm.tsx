@@ -60,11 +60,11 @@ const RsvpForm = () => {
           <ErrorMessage error={errors.allergies} />
         </div>
         <div className="flex flex-col justify-start">
-          <label htmlFor="children" className="text-md">
+          <label htmlFor="children_0_3" className="text-md">
             Figli 0-3 anni *
           </label>
           <input
-            id="children"
+            id="children_0_3"
             type="number"
             className="input input-bordered w-full md:max-w-xs font-sans font-light"
             {...register("children_0_3", { valueAsNumber: true })}
@@ -72,11 +72,11 @@ const RsvpForm = () => {
           <ErrorMessage error={errors.children_0_3} />
         </div>
         <div className="flex flex-col justify-start">
-          <label htmlFor="children" className="text-md">
+          <label htmlFor="children_3_9" className="text-md">
             Figli 3-9 anni *
           </label>
           <input
-            id="children"
+            id="children_3_9"
             type="number"
             className="input input-bordered w-full md:max-w-xs font-sans font-light"
             {...register("children_3_9", { valueAsNumber: true })}
@@ -84,11 +84,11 @@ const RsvpForm = () => {
           <ErrorMessage error={errors.children_3_9} />
         </div>
         <div className="flex flex-col justify-start">
-          <label htmlFor="children" className="text-md">
+          <label htmlFor="children_9" className="text-md">
             Figli 9+ anni *
           </label>
           <input
-            id="children"
+            id="children_9"
             type="number"
             className="input input-bordered w-full md:max-w-xs font-sans font-light"
             {...register("children_9", { valueAsNumber: true })}

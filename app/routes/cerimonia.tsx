@@ -14,7 +14,7 @@ export const meta: MetaFunction = () => {
 export default function Cerimonia() {
   return (
     <div className="flex flex-col">
-      <div className="h-screen md:mx-auto md:py-8">
+      <div className="min-h-screen md:mx-auto md:py-8">
         <div className="flex flex-col justify-center gap-10 h-full items-center px-4 ">
           <div className="fade-in mx-auto p-4 md:w-[60vw] flex flex-col gap-4 justify-center items-center">
             <p className="text-center text-5xl md:text-7xl font-andaray">

@@ -58,7 +58,7 @@ export default function ListaNozze() {
 
   return (
     <div className="flex flex-col">
-      <div className="h-screen md:mx-auto md:py-8">
+      <div className="min-h-screen md:mx-auto md:py-8">
         <div className="flex flex-col justify-center md:h-full items-center px-4">
           <div className="fade-in mx-auto p-4 flex flex-col gap-4 justify-center items-center lg:w-[70vw]">
             <p className="text-center text-5xl md:text-7xl font-andaray mt-1 md:mt-0">

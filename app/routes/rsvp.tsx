@@ -37,7 +37,7 @@ const Rsvp = () => {
   return (
     <div className="min-h-screen w-full flex flex-col justify-center items-stretch md:items-center mt-5 md:mt-0 pb-10 md:pb-0">
       <div className="flex flex-col justify-center items-center mb-8">
-        <h1 className="font-andaray text-7xl md:text-9xl mb-5 text-center">
+        <h1 className="font-andaray text-5xl md:text-6xl mb-5 text-center">
           Répondez, s&apos;il vous plaît
         </h1>
         <div className="text-2xl text-center md:max-w-[800px]">

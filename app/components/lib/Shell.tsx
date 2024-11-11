@@ -4,7 +4,7 @@ type ShellProps = { children: React.ReactNode };
 
 export const Shell = ({ children }: ShellProps) => {
   return (
-    <div className="px-5 pt-4 bg-primary text-slate-200 font-californian">
+    <div className="px-5 pt-4 md:pt-8 bg-primary text-slate-200 font-californian">
       <Navbar />
       {children}
     </div>
